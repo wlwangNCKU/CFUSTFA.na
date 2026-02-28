@@ -111,11 +111,11 @@ contains
 - (12) **tableS4.csv**: (Table S.4) performance comparison of 5 factor analysis models with n = 300 based on 100 Monte Carlo trials;
 - (13) **tableS5.csv**: (Table S.5) performance comparison of 5 factor analysis models with n = 600 based on 100 Monte Carlo trials;
 - (14) **tableS6.csv**: (Table S.6) performance comparison of 5 factor analysis models with n = 900 based on 100 Monte Carlo trials;
-- (15) `./simu1/` subsubfolder: storing intermediate simulation results, including estimated parameters (`./results/simu1/para/*.csv`) and standard errors (`./results/simu1/sd/*.csv`) for various settings of sample sizes and missing rates in Experiment 1;
-- (16) `./simu2/` subsubfolder: storing intermediate simulation outputs, specifically various model selection criteria and performance metrics such as log-likelihood, AIC, BIC, MSPE, and CT for various settings of sample sizes and missing rates in Experiment 2.
+- (15) `./simu1` subsubfolder: storing intermediate simulation results, including estimated parameters (`./results/simu1/para/*.csv`) and standard errors (`./results/simu1/sd/*.csv`) for various settings of sample sizes and missing rates in Experiment 1;
+- (16) `./simu2` subsubfolder: storing intermediate simulation outputs, specifically various model selection criteria and performance metrics such as log-likelihood, AIC, BIC, MSPE, and CT for various settings of sample sizes and missing rates in Experiment 2.
 
 ## Additional Remark ##
 - Note (1): One can directly run each "source(.)" described in **master.R** file in the seperate R session to obtain the results.
-- Note (2): Because the estimation procedures in **fit_hcvdata.R** involve fitting five different models across multiple factor dimensions, the computations are time-consuming. Therefore, we have saved the fitted results in **hcv.results_q1.Rdata** to **hcv.results_q5.Rdata** under the `./data/` subfolder.
+- Note (2): Because the estimation procedures in **fit_hcvdata.R** involve fitting five different models across multiple factor dimensions, the computations are time-consuming. Therefore, we have saved the fitted results in **hcv.results_q1.Rdata** to **hcv.results_q5.Rdata** under the `./data` subfolder.
 - Note (3): Since **simulation1.R** takes a long time to run, to reproduce Tables 1 and S1–S3 and Figure 2 in Section 5,  we record these intermediately numerical results in `./results/simu1/para` and `./results/simu1/sd` subsubfolders so that one can use the R codes *table1,S1-S3.R** script in subfolder `./code` to obtain the final results based on the pre-saved .csv files.
 - Note (4): Since **simulation2.R** takes a long time to run, to reproduce Tables S4-S6 in the Supplementary Material, we record these intermediately numerical outputs in the `./results/simu2` subsubfolder so that one can use the R codes **tableS4-S6.R** to obtain the final results based on the pre-saved .csv files.
