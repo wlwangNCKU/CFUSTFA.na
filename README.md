@@ -67,7 +67,7 @@ contains the program (function) of
 - (6) **rSNFA.na.R**: main script for calculating the parameter estimates via the EM algorithm under the rSNFA model with missing information;
 - (7) **rSTFA.na.R**: main script for calculating the parameter estimates via the EM algorithm under the rSTFA model with missing information; 
 - (8) **tFA.R**: main script for calculating the parameter estimates via the EM algorithm under the tFA model with missing information; and 
-- (9) *gener_na.R*: main script for producting missing values.
+- (9) **gener_na.R**: main script for producting missing values.
 
 ## Subfolder: ./code ##
 `./code`
@@ -76,14 +76,14 @@ contains
 - (2) **simulation1.R**: main script for conducting Experiment 1 to re-generate simulated datasets and estimating model parameters under different sample sizes and missing rates; 
 - (3) **simulation2.R**: main script for conducting Experiment 2 to examine the performance of the CFUSTFA model relative to the FA, tFA, rSNFA and rSTFA approaches across various sample sizes and missing rates;
 - (4) **table1,S1-S3.R**: main script for summarizing estimation accuracy using 2 criteria — STD and IMSE — based on the simulation results (load files in the `./simu1/para/*.csv` and `./simu1/sd/*.csv` subsubfolders, and then run **table1,S1-S3.R**);
-- (5) **tableS4-S6.R**: main script for performance comparison of 5 models (n=300, 600, 900) based on 100 Monte Carlo trials using AIC, BIC, MSPE, and CT (load files in the `./simu2/*.csv' subsubfolder, and then run **tableS4-S6.R**);
-- (6) **fig2.R**: main script for creating RMSE comparison plots across different parameters, sample sizes, and missing data rates (load files in the `./simu1/para/*.csv' subsubfolder first, and then run **fig2.R**);
-- (7) **table2.R**: main script for summarizing the range, mean, SD, skewness, kurtosis, and missingness rate of biochemical markers (read **hcv.csv** in the './data/source/' subsubfoloder first, and then run **table2.R**);
-- (8) **table3.R**: main script for computing and comparing AIC/BIC values across 5 models and 5 latent dimensions (read **hcv.results_q1.Rdata** to **hcv.results_q5.Rdata** in the `./data/` subfolder first, and then run **table3.R**);
-- (9) **table4.R**: main script for reporting ML estimates and standard errors of CFUSTFA model parameters for q = 4 (read **hcv.csv** in the './data/source/' subsubfoloder first, then load **hcv.results_q4.Rdata** in the `./data/` subfoloder, and finally run **cfustfa.na.se.hcv.R**);
-- (10) **fig3.R**: main script for creating pairwise scatter plots with histograms and correlation coefficients using data (read **hcv.csv** in the './data/source/' subsubfoloder first, and then run **fig3.R**);
-- (11) **fig4.R**: main script for plotting model-wise factor score comparisons between CFUSTFA and 4 benchmark models (load **hcv.results_q4.Rdata** in the `./data/` subfolder, and then run **fig4.R**);
-- (12) **fit_hcvdata.R**: main script for model fitting (FA, tFA, rSNFA, rSTFA, CFUSTFA) to the hepatitis C dataset across q = 1–5; saved results are stored in `./data/`.
+- (5) **tableS4-S6.R**: main script for performance comparison of 5 models (n=300, 600, 900) based on 100 Monte Carlo trials using AIC, BIC, MSPE, and CT (load files in the `./simu2/*.csv` subsubfolder, and then run **tableS4-S6.R**);
+- (6) **fig2.R**: main script for creating RMSE comparison plots across different parameters, sample sizes, and missing data rates (load files in the `./simu1/para/*.csv` subsubfolder first, and then run **fig2.R**);
+- (7) **table2.R**: main script for summarizing the range, mean, SD, skewness, kurtosis, and missingness rate of biochemical markers (read **hcv.csv** in the `./data/source` subsubfoloder first, and then run **table2.R**);
+- (8) **table3.R**: main script for computing and comparing AIC/BIC values across 5 models and 5 latent dimensions (read **hcv.results_q1.Rdata** to **hcv.results_q5.Rdata** in the `./data` subfolder first, and then run **table3.R**);
+- (9) **table4.R**: main script for reporting ML estimates and standard errors of CFUSTFA model parameters for q = 4 (read **hcv.csv** in the './data/source' subsubfoloder first, then load **hcv.results_q4.Rdata** in the `./data` subfoloder, and finally run **cfustfa.na.se.hcv.R**);
+- (10) **fig3.R**: main script for creating pairwise scatter plots with histograms and correlation coefficients using data (read **hcv.csv** in the `./data/source` subsubfoloder first, and then run **fig3.R**);
+- (11) **fig4.R**: main script for plotting model-wise factor score comparisons between CFUSTFA and 4 benchmark models (load **hcv.results_q4.Rdata** in the `./data` subfolder, and then run **fig4.R**);
+- (12) **fit_hcvdata.R**: main script for model fitting (FA, tFA, rSNFA, rSTFA, CFUSTFA) to the hepatitis C dataset across q = 1–5; saved results are stored in `./data`.
 
 ## Subfolder: ./data ##
 `./data`
@@ -117,5 +117,5 @@ contains
 ## Additional Remark ##
 - Note (1): One can directly run each "source(.)" described in **master.R** file in the seperate R session to obtain the results.
 - Note (2): Because the estimation procedures in **fit_hcvdata.R** involve fitting five different models across multiple factor dimensions, the computations are time-consuming. Therefore, we have saved the fitted results in **hcv.results_q1.Rdata** to **hcv.results_q5.Rdata** under the `./data/` subfolder.
-- Note (3): Since **simulation1.R** takes a long time to run, to reproduce Tables 1 and S1–S3 and Figure 2 in Section 5,  we record these intermediately numerical results in `./results/simu1/para/` and `./results/simu1/sd/` subsubfolders so that one can use the R codes *table1,S1-S3.R** script in subfolder `./code/` to obtain the final results based on the pre-saved .csv files.
-- Note (4): Since **simulation2.R** takes a long time to run, to reproduce Tables S4-S6 in the Supplementary Material, we record these intermediately numerical outputs in the `./results/simu2/` subsubfolder so that one can use the R codes **tableS4-S6.R** to obtain the final results based on the pre-saved .csv files.
+- Note (3): Since **simulation1.R** takes a long time to run, to reproduce Tables 1 and S1–S3 and Figure 2 in Section 5,  we record these intermediately numerical results in `./results/simu1/para` and `./results/simu1/sd` subsubfolders so that one can use the R codes *table1,S1-S3.R** script in subfolder `./code` to obtain the final results based on the pre-saved .csv files.
+- Note (4): Since **simulation2.R** takes a long time to run, to reproduce Tables S4-S6 in the Supplementary Material, we record these intermediately numerical outputs in the `./results/simu2` subsubfolder so that one can use the R codes **tableS4-S6.R** to obtain the final results based on the pre-saved .csv files.
