@@ -40,19 +40,19 @@ The getwd() function shall determine an absolute pathname of the "current workin
 
 Before running the codes **fig1.R**, **fig2.R**, **fig3.R**, **fig4.R**, **fit_hcvdata.R**, **simulation1.R**, **simulation2.R**, **table1,S1-S3.R**, **table2.R**, **table3.R**, **table4.R** and **tableS4-S6.R**, one needs to install the following R packages:
   
-install.packages("mvtnorm")    # Version 1.1-3  
-install.packages("tmvtnorm")   # Version 1.5  
-install.packages("cubature")   # Version 2.0.4.5  
-install.packages("MomTrunc")   # Version 6.0  
-install.packages("moments")    # Version 0.14.1  
-install.packages("gclus")      # Version 1.3.2  
-install.packages("mclust")     # Version 6.0.0  
-install.packages("rgl")        # Version 0.110.2  
-install.packages("misc3d")     # Version 0.9-1  
-install.packages("plot3D")     # Version 1.4  
-install.packages("matrixcalc") # Version 1.0-6  
-install.packages("devtools")   # Version 2.4.5  
-install.packages("ggplot2")    # Version 3.4.0
+  install.packages("mvtnorm")    # Version 1.1-3  
+  install.packages("tmvtnorm")   # Version 1.5  
+  install.packages("cubature")   # Version 2.0.4.5  
+  install.packages("MomTrunc")   # Version 6.0  
+  install.packages("moments")    # Version 0.14.1  
+  install.packages("gclus")      # Version 1.3.2  
+  install.packages("mclust")     # Version 6.0.0  
+  install.packages("rgl")        # Version 0.110.2  
+  install.packages("misc3d")     # Version 0.9-1  
+  install.packages("plot3D")     # Version 1.4  
+  install.packages("matrixcalc") # Version 1.0-6  
+  install.packages("devtools")   # Version 2.4.5  
+  install.packages("ggplot2")    # Version 3.4.0
 
 R codes for the implementation of the proposed methodology are provided.
 
